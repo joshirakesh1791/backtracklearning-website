@@ -1,0 +1,26 @@
+<section class="outcomes section-padding" id="outcomes">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">What You'll Learn</span>
+      <h2 class="section-title">Skills That Get You Hired</h2>
+      <p class="section-subtitle">A hands-on curriculum built around real industry projects — not outdated textbooks.</p>
+    </div>
+
+    <div class="outcomes__grid">
+      <div class="outcome-card card" *ngFor="let item of outcomes">
+        <div class="outcome-card__icon" [style.background]="item.iconBg">
+          <span class="material-icons">{{item.icon}}</span>
+        </div>
+        <h3>{{item.title}}</h3>
+        <p>{{item.desc}}</p>
+      </div>
+    </div>
+
+    <div class="outcomes__tools">
+      <p class="tools-label">Tools &amp; Technologies You'll Master</p>
+      <div class="tools-list">
+        <span class="tool-chip" *ngFor="let tool of tools">{{tool}}</span>
+      </div>
+    </div>
+  </div>
+</section>

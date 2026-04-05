@@ -1,0 +1,34 @@
+<section class="instructor section-padding" id="instructor">
+  <div class="container instructor__inner">
+    <div class="instructor__visual">
+      <div class="instructor__img-wrap">
+        <div class="instructor__img-placeholder">
+          <span class="material-icons">person</span>
+        </div>
+        <div class="instructor__exp-badge">
+          <strong>12+</strong>
+          <span>Years in Industry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructor__content">
+      <span class="tag">Your Instructor</span>
+      <h2 class="section-title">Learn From Someone Who's Done It</h2>
+      <p class="instructor__bio">
+        With over <strong>12 years of hands-on experience</strong> in automation testing and quality engineering,
+        your instructor has worked on enterprise-level projects across leading companies. Now, they're bringing
+        that real-world expertise directly into your learning journey.
+      </p>
+
+      <div class="instructor__highlights">
+        <div class="highlight-item" *ngFor="let h of highlights">
+          <span class="material-icons highlight-icon">{{h.icon}}</span>
+          <span>{{h.text}}</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-primary">Learn From the Expert</a>
+    </div>
+  </div>
+</section>
