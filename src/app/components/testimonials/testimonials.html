@@ -1,0 +1,25 @@
+<section class="testimonials section-padding" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Student Reviews</span>
+      <h2 class="section-title">What Our Students Say</h2>
+      <p class="section-subtitle">Don't take our word for it — hear directly from the people who've been through the course.</p>
+    </div>
+
+    <div class="testimonials__grid">
+      <div class="testimonial-card card" *ngFor="let t of testimonials">
+        <div class="stars">
+          <span class="material-icons" *ngFor="let s of [1,2,3,4,5]">star</span>
+        </div>
+        <p class="testimonial-text">"{{t.text}}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{t.initials}}</div>
+          <div>
+            <strong>{{t.name}}</strong>
+            <span>{{t.role}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

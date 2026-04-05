@@ -1,0 +1,21 @@
+<section class="how-it-works section-padding" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">How It Works</span>
+      <h2 class="section-title">Live Classes. Real Projects. Real Results.</h2>
+      <p class="section-subtitle">No pre-recorded videos. Every session is live, interactive, and hands-on.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step" *ngFor="let step of steps; let i = index">
+        <div class="step__number">{{i + 1}}</div>
+        <div class="step__content">
+          <span class="material-icons step__icon">{{step.icon}}</span>
+          <h3>{{step.title}}</h3>
+          <p>{{step.desc}}</p>
+        </div>
+        <div class="step__connector" *ngIf="i < steps.length - 1"></div>
+      </div>
+    </div>
+  </div>
+</section>
