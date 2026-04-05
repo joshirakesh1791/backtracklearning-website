@@ -1,0 +1,25 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar__inner">
+    <a href="#" class="navbar__logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#FF6B35"/>
+        <path d="M8 10h8c3.3 0 6 2.7 6 6s-2.7 6-6 6H8V10z" fill="white"/>
+        <circle cx="16" cy="16" r="3" fill="#FF6B35"/>
+        <path d="M20 22l6 4V18l-6 4z" fill="white"/>
+      </svg>
+      <span class="navbar__logo-text">Backtrack<strong>Learning</strong></span>
+    </a>
+
+    <ul class="navbar__links" [class.open]="menuOpen">
+      <li><a href="#outcomes" (click)="closeMenu()">Course</a></li>
+      <li><a href="#instructor" (click)="closeMenu()">Instructor</a></li>
+      <li><a href="#success" (click)="closeMenu()">Success Stories</a></li>
+      <li><a href="#testimonials" (click)="closeMenu()">Reviews</a></li>
+      <li><a href="#contact" class="btn-primary nav-cta" (click)="closeMenu()">Enroll Now</a></li>
+    </ul>
+
+    <button class="navbar__hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

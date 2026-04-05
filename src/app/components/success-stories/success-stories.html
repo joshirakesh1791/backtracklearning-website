@@ -1,0 +1,29 @@
+<section class="success-stories section-padding" id="success">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Student Success</span>
+      <h2 class="section-title">They Took the Leap. See What Happened.</h2>
+      <p class="section-subtitle">Real students. Real outcomes. Real jobs.</p>
+    </div>
+
+    <div class="stories__grid">
+      <div class="story-card card" *ngFor="let story of stories">
+        <div class="story-card__top">
+          <div class="story-avatar">{{story.initials}}</div>
+          <div>
+            <h4>{{story.name}}</h4>
+            <p class="story-role">{{story.before}} → <strong>{{story.after}}</strong></p>
+          </div>
+          <div class="story-badge">
+            <span class="material-icons">trending_up</span>
+            {{story.hike}}
+          </div>
+        </div>
+        <p class="story-quote">"{{story.quote}}"</p>
+        <div class="story-company">
+          <span class="material-icons">business</span> Now at {{story.company}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

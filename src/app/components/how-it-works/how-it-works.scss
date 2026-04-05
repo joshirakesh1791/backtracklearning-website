@@ -1,0 +1,100 @@
+.how-it-works {
+  background: var(--primary-dark);
+
+  .tag {
+    background: rgba(255,107,53,0.2);
+    color: var(--accent);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+
+    .section-title { color: var(--white); }
+    .section-subtitle { color: rgba(255,255,255,0.65); margin: 0 auto; }
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    position: relative;
+
+    &__number {
+      width: 48px; height: 48px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 16px rgba(255,107,53,0.4);
+    }
+
+    &__connector {
+      position: absolute;
+      top: 24px;
+      left: calc(50% + 24px);
+      right: calc(-50% + 24px);
+      height: 2px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    &__content {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      width: 100%;
+
+      .step__icon {
+        font-size: 32px;
+        color: var(--accent);
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      h3 {
+        font-size: 16px;
+        color: var(--white);
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: rgba(255,255,255,0.6);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .how-it-works .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .step__connector { display: none; }
+  }
+}
+
+@media (max-width: 600px) {
+  .how-it-works .steps {
+    grid-template-columns: 1fr;
+  }
+}

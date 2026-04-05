@@ -1,0 +1,23 @@
+<section class="companies section-padding" id="companies">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Industry Collaborations</span>
+      <h2 class="section-title">Our Students Work at Top Companies</h2>
+      <p class="section-subtitle">BacktrackLearning graduates are trusted by leading companies across India and beyond.</p>
+    </div>
+
+    <div class="companies__logos">
+      <div class="company-logo" *ngFor="let company of companies">
+        <div class="company-logo__inner">
+          <span class="material-icons">business_center</span>
+          <span>{{company}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="companies__cta">
+      <p>Want your company to collaborate with us?</p>
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</section>
